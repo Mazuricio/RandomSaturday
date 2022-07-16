@@ -1,0 +1,12 @@
+## senhas
+senhas.py
+.vscode/
+__pycache__/
+utilizadas/
+new_post.jpg.REMOVE_ME
+old_utilizadas/
+tiradas/
+config/
+new/
+*.json
+Iaebot.py

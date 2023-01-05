@@ -2,7 +2,7 @@ import re, os, random
 pasta = 'imagens'
 def ler_imagens(pasta):
     #pasta = 'imagens'
-    padrao = "\.(png|jpg|jpeg)$"i
+    padrao = "(?i)\.(png|jpg|jpeg)$"
     caminhos = [os.path.join(pasta, nome) for nome in os.listdir(pasta)]
     arquivos = [arq for arq in caminhos if os.path.isfile(arq)]
     jpgs = [arq for arq in arquivos if re.match(padrao, arq)]

@@ -1,10 +1,11 @@
-import os, random
+import re, os, random
 pasta = 'imagens'
 def ler_imagens(pasta):
     #pasta = 'imagens'
+    padrao = "\.(png|jpg|jpeg)$"i
     caminhos = [os.path.join(pasta, nome) for nome in os.listdir(pasta)]
     arquivos = [arq for arq in caminhos if os.path.isfile(arq)]
-    jpgs = [arq for arq in arquivos if arq.lower().endswith(".jpg") or arq.lower().endswith(".png")  or arq.lower().endswith(".jpeg")]
+    jpgs = [arq for arq in arquivos if re.match(padrao, arq)]
     #print(jpgs)
     #print(len(jpgs))
     if len(jpgs) == 1:
